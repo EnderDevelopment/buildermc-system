@@ -1,0 +1,45 @@
+name: Buildermc System
+version: 26.3
+main: com.enderdevelopment.plugin.Main
+api-version: "1.21"
+author: EnderDevelopment
+description: Moderation and spawn tools for Buildermc.
+commands:
+  setspawn:
+    description: Set the server spawn at your current location.
+    usage: /setspawn
+    permission: buildermc.admin
+  vanish:
+    description: Toggle your visibility to other players.
+    usage: /vanish
+    permission: buildermc.vanish
+  report:
+    description: Report a player to the staff team.
+    usage: /report <player> <reason>
+  spawn:
+    description: Teleport to the server spawn.
+    usage: /spawn
+  tempban:
+    description: Temporarily ban a player.
+    usage: /tempban <player> <duration> [reason]
+    permission: buildermc.tempban
+  tempbanip:
+    description: Temporarily ban a player's IP address.
+    usage: /tempbanip <player> <duration> [reason]
+    permission: buildermc.tempbanip
+permissions:
+  buildermc.admin:
+    description: Allows setting the server spawn.
+    default: op
+  buildermc.vanish:
+    description: Allows using vanish.
+    default: op
+  buildermc.tempban:
+    description: Allows temporarily banning players.
+    default: op
+  buildermc.tempbanip:
+    description: Allows temporarily banning IP addresses.
+    default: op
+  buildermc.report.notify:
+    description: Receives player reports.
+    default: op
